@@ -197,7 +197,7 @@ var WhatsApp = function (app) {
         $(".chat-head img");
         $(".chat-name h1").text(cg.name);
         if (cg.members == undefined) {
-          $(".chat-name p").text("zuletzt online um " + cg.online);
+          $(".chat-name p").text("emri" );
           // Nachrichten konfigurieren
           $(".chat-bubble").remove();
           for (var i = 0; i < cg.messages.length; i++) {if (window.CP.shouldStopExecution(4)) break;
@@ -228,7 +228,7 @@ var WhatsApp = function (app) {
             $(".chat").append("<div class='chat-bubble me'><div class='my-mouth'></div><div class='content'>" + gc.text + "</div><div class='time'>" + gc.time + "</div></div>");
           } else
           {
-            $(".chat").append("<div class='chat-bubble you'><div class='your-mouth'></div><h4>" + gc.name + "</h4><div class='content'>" + gc.text + "</div><div class='time'>" + gc.time + "</div></div>");
+            $(".chat").append("<div class='chat-bubble you'><div class='your-mouth'></div><h5>" + gc.name + "</h5><div class='content'>" + gc.text + "</div><div class='time'>" + gc.time + "</div></div>");
           }
         } else
         {
@@ -245,7 +245,7 @@ var WhatsApp = function (app) {
         $(".information").css("display", "flex");
         $("#close-contact-information").show();
         if (currentChat.members == undefined) {
-          $(".information").append("<img src='" + currentChat.img + "'><div><h1>Name:</h1><p>" + currentChat.name + "</p></div><div id='listGroups'><h1>Gemeinsame Gruppen:</h1></div>");
+          $(".information").append("<img src='" + currentChat.img + "'><div><h6>Name:</h6><p>" + currentChat.name + "</p></div><div id='listGroups'><h4>Gemeinsame Gruppen:</h4></div>");
           for (var i = 0; i < currentChat.groups.length; i++) {if (window.CP.shouldStopExecution(7)) break;
             html = $("<div class='listGroups'><img src='" + currentChat.groups[i].img + "'><p>" + currentChat.groups[i].name + "</p></div>");
             $("#listGroups").append(html);
@@ -261,7 +261,7 @@ var WhatsApp = function (app) {
           }window.CP.exitedLoop(7);
         } else
         {
-          $(".information").append(currentChat.name + "</p></div><div id='listGroups'><h1>Mitglieder:</h1></div>");
+          $(".information").append(currentChat.name + "</p></div><div id='listGroups'><h4>Mitglieder:</h4></div>");
           for (var i = 0; i < currentChat.members.length; i++) {if (window.CP.shouldStopExecution(9)) break;
             html = $(currentChat.members[i].name + "</p></div>");
             $("#listGroups").append(html);
@@ -315,7 +315,10 @@ var WhatsApp = function (app) {
   
     $(document).ready(function () {
       app.Model.start();
+      // $('#chat_msg_id').css('overflow', 'hidden').autogrow();
+
     });
+
   
     var Ctrl = {
       addClick: function (html, that) {
@@ -335,6 +338,7 @@ var WhatsApp = function (app) {
           $(".input-message").keyup(function (ev) {
             if (ev.which == 13 || ev.keyCode == 13) {
               app.Model.writeMessage();
+              e.preventDefault();
             }
           });
   
