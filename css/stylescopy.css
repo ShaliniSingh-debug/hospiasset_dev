@@ -3,15 +3,11 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    /* overflow: hidden; */
-
-  
+    overflow: hidden;
 }
 
 body {
     background: #dbdbdb;
-    height: 100vh;
-    overflow-x: hidden;
 }
 
 i {
@@ -242,7 +238,7 @@ i {
 }
 
 .wrap-chat {
-    position:relative;
+   
     height: calc(100% - 120px);
     display: flex;
 }
@@ -380,7 +376,6 @@ i {
     height: 60px;
     background: #f1f1f1;
     display: flex;
-    position:unset;
 }
 
 .message {
@@ -413,7 +408,6 @@ div#message{
     width: 100%;
     margin: 0px 10px;
     border: none;
-    overflow-y: auto;
 }
 
 .input-message:focus {
