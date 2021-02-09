@@ -18,6 +18,29 @@ i {
     width: 60px;
     margin: auto;
 }
+/* navbar */
+
+.navbar-fixed-top {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+/*     z-index: 1; */
+  background:#194783;
+}
+
+.navbar-fixed-top.cbp-af-header-shrink {
+	padding: 10px 0;
+}
+img.images{
+    background-color: #fff;
+    vertical-align: middle;
+    border: 0;
+    width: 100px;
+    height: 80px;
+    margin:  3px 0;
+}
+
+/* navbar end */
 
 /* ------ FONTS ------ */
 .font-name {
@@ -52,7 +75,7 @@ i {
 
 .wrap {
     display: flex;
-    height: 100vh;
+    height: 88vh;
     min-width: 600px;
     max-width: 100%;
     margin: auto;
@@ -66,8 +89,8 @@ i {
 
 .profile {
     width: 101%;
-    height: 60px;
-    background: #4c9ef0;
+    height: 35px;
+    background: #f4f9f9;
     border-right: 1px solid #dbdbdb;
     display: flex;
     justify-content: space-between;
@@ -187,7 +210,7 @@ i {
     flex-direction: column;
     justify-content: space-between;
     padding: 9px;
-    margin:15px 0 0 0;
+    margin:15px -3px 0 0;
     border-bottom: 1px solid #eeeeee;
 }
 
@@ -212,9 +235,9 @@ i {
 }
 
 .chat-head {
-    background-color: #4c9ef0; 
+    background-color: #f4f9f9; 
     width: 100%;
-    height: 60px;
+    height: 35px;
     display: flex;
 }
 
@@ -242,7 +265,7 @@ i {
 }
 
 .wrap-chat {
-    position:relative;
+    /* position:relative; */
     height: calc(100% - 120px);
     display: flex;
 }
@@ -312,7 +335,7 @@ i {
     padding: 5px 7px;
     width: 470px;
     max-width: 100%;
-    position: relative;
+    /* position: relative; */
 }
 
 .you {
@@ -399,6 +422,41 @@ i {
 .icons{
     margin-top: 7px;
 }
+.dropdown.show{
+    position: relative;
+    transform: none;
+   
+}
+
+#show{
+    transform: none;
+    transform:translate3d(-3px,0px,0px);
+    transition: none;
+    z-index: 999;
+    left: 0;
+    outline: none;
+}
+.button4 {
+    background-color: #f1f1f1;
+    
+    border: 0px solid #e7e7e7;
+  }
+  .button4:hover{
+    background-color: #f1f1f1;
+    
+    border: 0px solid #e7e7e7;
+  }
+  .button4:active{
+    background-color: #f1f1f1;
+    
+    border: 0px solid #e7e7e7;
+  }
+  .button4:focus{
+      outline: 0cm;
+  }
+ 
+  
+
 div#message{
     margin-left: 10px!important;
    }
@@ -433,8 +491,8 @@ div#message{
 }
 .profile2 {
     width: 101%;
-    height: 60px;
-    background: #4c9ef0;
+    height: 35px;
+    background: #f4f9f9;
     border-right: 1px solid #dbdbdb;
     display: flex;
     justify-content: space-between;
@@ -450,7 +508,7 @@ h5.right-head{
 }
 /* ------ SCROLLBAR ------ */
 
-body::-webkit-scrollbar, .contact-list::-webkit-scrollbar, .chat::-webkit-scrollbar, .information::-webkit-scrollbar, .contact-list-right::-webkit-scrollbar, #chat_msg_id::-webkit-scrollbar {
+body::-webkit-scrollbar, .contact-list::-webkit-scrollbar, .chat::-webkit-scrollbar, .information::-webkit-scrollbar, .contact-list-right::-webkit-scrollbar {
     width: 0.4em;
     height: 0.4em;
 }
@@ -462,16 +520,16 @@ body::-webkit-scrollbar-thumb, .contact-list::-webkit-scrollbar-thumb, .chat::-w
 /* ------ MEDIA QUERIES ------ */
 @media (min-width: 1200px) {
     .wrap {
-        margin-bottom: 2vh;
-        margin-top: 20px;
-        height: calc(98vh - 15px);
+        /* margin-bottom: 2vh; */
+        margin-top: 0px;
+        height: calc(100vh - 0px);
     }
 }
 @media (min-width: 1300px) {
     .wrap {
-        margin-bottom: 2vh;
-        margin-top: 20px;
-        height: calc(98vh - 15px);
+        /* margin-bottom: 2vh; */
+        margin-top: 0px;
+        height: calc(100vh - 0px);
     }
     i{
         width:51px;
@@ -479,9 +537,9 @@ body::-webkit-scrollbar-thumb, .contact-list::-webkit-scrollbar-thumb, .chat::-w
 }
 @media (min-width: 1600px) {
     .wrap {
-        margin-bottom: 2vh;
-        margin-top: 20px;
-        height: calc(98vh - 15px);
+        /* margin-bottom: 2vh; */
+        margin-top: 0px;
+        height: calc(100vh -0px);
     }
     i{
         width:51px;
@@ -490,6 +548,6 @@ body::-webkit-scrollbar-thumb, .contact-list::-webkit-scrollbar-thumb, .chat::-w
 
 @media (max-width: 600px) {
     .wrap {
-        height: calc(100vh - 0.4em);
+        height: calc(100vh - 0px);
     }
 }

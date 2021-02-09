@@ -315,8 +315,8 @@ var WhatsApp = function (app) {
   
     $(document).ready(function () {
       app.Model.start();
-      // $('#chat_msg_id').css('overflow', 'hidden').autogrow();
-
+       //$('#chat_msg_id').css('overflow', 'hidden');
+          
     });
 
   
